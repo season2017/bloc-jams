@@ -17,7 +17,7 @@ body.landing {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transition: translateY(-50%);
+    transform: translateY(-50%);
     width: 100%;
     text-align: center;
     font-size: 4rem;
@@ -32,9 +32,9 @@ body.landing {
  }
 
  .point {
-     position: relative;
-     padding: 2rem;
-     text-align: center;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
  }
 
  .point .point-title {
