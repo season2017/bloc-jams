@@ -14,6 +14,7 @@ body {
     min-height: 100%;
 }
 
+
 .navbar {
     position: relative;
     padding: 0.5rem;
@@ -54,7 +55,11 @@ body {
 }
 
 .links-container .navbar-link:hover {
+<<<<<<< HEAD
     color: rgb(233, 50, 117);
+=======
+    color: rgb(233,50,117);
+>>>>>>> checkpoint-6
 }
 
 .links-container .navbar-link:active {
@@ -67,8 +72,13 @@ body {
 }
 
 .container.narrow {
+<<<<<<< HEAD
      max-width: 56rem;
  }
+=======
+    max-width: 56rem;
+}
+>>>>>>> checkpoint-6
 
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
@@ -78,12 +88,22 @@ body {
           padding-left: 1rem;
           padding-right: 1rem;
         }
+<<<<<<< HEAD
         .column.full { width: 100%; }
         .column.two-thirds { width: 66.7%; }
         .column.half { width: 50%; }
         .column.third { width: 33.3%; }
         .column.fourth { width: 25%; }
         .column.flow-opposite { float: right;; }
+=======
+          .column.full { width: 100%;}
+          .column.two-thirds { width: 66.7%;}
+          .column.half { width: 50%;}
+          .column.third {width: 33.3%;}
+          .column.fourth{ width: 25%;}
+          .column.flow-opposite { float: right;}
+
+>>>>>>> checkpoint-6
       }
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
@@ -95,7 +115,10 @@ body {
         padding-right: 1rem;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> checkpoint-6
 }
 
 .clearfix::before, .clearfix::after {
