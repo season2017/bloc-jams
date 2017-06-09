@@ -55,8 +55,6 @@ body {
 }
 
 .links-container .navbar-link:hover {
-    color: rgb(233, 50, 117);
-    color: rgb(233,50,117);
     color: rgb(233,50,117);
 }
 
@@ -70,7 +68,7 @@ body {
 }
 
 .container.narrow {
-     max-width: 56rem;
+    max-width: 56rem;
 }
 
 /* Medium and small screens (640px) */
@@ -81,20 +79,13 @@ body {
           padding-left: 1rem;
           padding-right: 1rem;
         }
-
-        .column.full { width: 100%; }
-        .column.two-thirds { width: 66.7%; }
-        .column.half { width: 50%; }
-        .column.third { width: 33.3%; }
-        .column.fourth { width: 25%; }
-        .column.flow-opposite { float: right;; }
-
           .column.full { width: 100%;}
           .column.two-thirds { width: 66.7%;}
           .column.half { width: 50%;}
           .column.third {width: 33.3%;}
           .column.fourth{ width: 25%;}
           .column.flow-opposite { float: right;}
+
       }
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
@@ -105,6 +96,7 @@ body {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
 }
 
 .clearfix::before, .clearfix::after {
