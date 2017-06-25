@@ -64,7 +64,6 @@
   var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
 var setCurrentAlbum = function(album) {
-
     // Assign values to each part of teh album (text, images)
      albumTitle.firstChild.nodeValue = album.title;
      albumArtist.firstChild.nodeValue = album.artist;
@@ -87,7 +86,7 @@ var setCurrentAlbum = function(album) {
 var albums = [albumPicasso, albumMarconi, albumDisney];
 var index = 1;
 
-albumImage.addEventListener('click', function(event) {
+albumImage.addsEventListener('click', function(event) {
    setCurrentAlbum(albums[index]);
    index++;
    if (index == albums.length){
