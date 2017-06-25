@@ -85,7 +85,6 @@
      setCurrentAlbum(albumPicasso);
  };
 
-
  var albums = [albumPicasso, albumMarconi, albumDisney];
  var index = 0;
 
