@@ -63,7 +63,7 @@
   var albumImage = document.getElementsByClassName('album-cover-art')[0];
   var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
-  var setCurrentAlbum = function(album) {
+var setCurrentAlbum = function(album) {
 
     // Assign values to each part of teh album (text, images)
      albumTitle.firstChild.nodeValue = album.title;
@@ -84,11 +84,9 @@
      setCurrentAlbum(albumPicasso);
  };
 
-
- var albums = [albumPicasso, albumMarconi, albumDisney];
- var index = 1;
-
- albumImage.addEventListener('click', function(event) {
+var albums = [albumPicasso, albumMarconi, albumDisney];
+var index = 1;
+albumImage.addEventListener('click', function(event) {
    setCurrentAlbum(albums[index]);
    index++;
    if (index == albums.length){
