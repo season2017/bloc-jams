@@ -63,7 +63,6 @@
   var albumImage = document.getElementsByClassName('album-cover-art')[0];
   var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
-
   var setCurrentAlbum = function(album) {
 
     // Assign values to each part of teh album (text, images)
@@ -86,7 +85,7 @@
  };
 
  var albums = [albumPicasso, albumMarconi, albumDisney];
- var index = 0;
+ var index = 1;
 
  albumImage.addEventListener('click', function(event) {
    setCurrentAlbum(albums[index]);
