@@ -86,6 +86,7 @@ var setCurrentAlbum = function(album) {
 
 var albums = [albumPicasso, albumMarconi, albumDisney];
 var index = 1;
+
 albumImage.addEventListener('click', function(event) {
    setCurrentAlbum(albums[index]);
    index++;
