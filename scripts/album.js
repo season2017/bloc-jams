@@ -48,7 +48,7 @@
  var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
-     + '  <td class="song-item-number">' + songNumber + '</td>'
+     + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
      + '  <td class="song-item-title">' + songName + '</td>'
      + '  <td class="song-item-duration">' + songLength + '</td>'
      + '</tr>'
@@ -63,6 +63,7 @@
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
      var albumImage = document.getElementsByClassName('album-cover-art')[0];
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
 
 var setCurrentAlbum = function(album) {
 // Assign values to each part of the album (text, images)
@@ -80,9 +81,32 @@ var setCurrentAlbum = function(album) {
      }
  };
 
- window.onload = function() {
+var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+var songRows = document.getElementsByClassName('album-view-song-item');
+
+// Album button templates
+var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+
+window.onload = function() {
      setCurrentAlbum(albumPicasso);
- };
+     songListContainer.addEventListener('mouseover', function(event) {
+       console.log(event.target);
+
+       // Only target individual song rows during event delegation
+       if (event.target.parentElement.className === 'album-view-song-item') {
+             // Change the content from the number to the play button's HTML
+             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+         }
+ });
+
+      for (var i = 0; i < songRows.length; i++) {
+         songRows[i].addEventListener('mouseleave', function(event) {
+             // Revert the content back to the number
+             // Selects first child element, which is the song-item-number element
+             this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+         });
+      }
+}
 
 var albums = [albumPicasso, albumMarconi, albumDisney];
 var index = 1;
